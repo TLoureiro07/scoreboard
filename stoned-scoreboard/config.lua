@@ -14,9 +14,6 @@ Config = Config or {}
 -- Open scoreboard key
 Config.OpenKey = Keys["F10"]
 
--- Link da imagem do cabeçalho
-Config.ScoreboardHeaderImage = "https://images7.alphacoders.com/587/587535.jpg"
-
 
 -- Max Server Players
 Config.MaxPlayers = GetConvarInt('sv_maxclients', 200) -- It returnes 64 if it cant find the Convar Int
@@ -24,7 +21,8 @@ Config.MaxPlayers = GetConvarInt('sv_maxclients', 200) -- It returnes 64 if it c
 -- Jobs names
 
 Config.policejob1 = 'police'
-Config.policejob2 = 'sheriff'
+Config.policejob2 = '', --if you have another police job, add it
+
 Config.ambulancejob = 'ambulance'
 
 -- Minimum Police for Actions
