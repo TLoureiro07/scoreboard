@@ -1,11 +1,4 @@
-ESX = nil
-
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
+ESX = exports["es_extended"]:getSharedObject()
 
 -- Codigo
 
@@ -33,13 +26,9 @@ end
 
 
 Citizen.CreateThread(function()
-    --TriggerEvent('chat:addSuggestion', '/ilegal', 'Autorizar ou proibir a atividade ilegal no servidor', {
-        --{ name="ON/OFF", help="ON - Permitir RP Agressivo | OFF - Proíbir RP Agressivo" },
-    --})
-    
     while true do
-        local isActivatorPressed = IsControlJustPressed(0, 57)
-        local isSecondaryPressed =  IsControlPressed(0, 57)
+        local isActivatorPressed = IsControlJustPressed(0, Config.OpenKey)
+        local isSecondaryPressed =  IsControlPressed(0, Config.OpenKey)
         local isPauseESCPressed = IsControlJustPressed(0, 322)
         local isPausePPressed = IsControlJustPressed(0, 199)
         if isActivatorPressed and isSecondaryPressed then
