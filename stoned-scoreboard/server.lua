@@ -1,6 +1,6 @@
-ESX = nil
+ESX = exports["es_extended"]:getSharedObject()
+
 estado = "on"
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 -- Code
 
