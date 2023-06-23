@@ -56,14 +56,7 @@ Config.INEM = {
     
 }
 
--- Current Cops Online
+-- Current Cops Online | For tests
 Config.CurrentCops = 0
 
 Config.CurrentINEM = 0
-
-Controls = {
-    Activator = { -- Open/Close Radio
-        Name = "INPUT_MP_TEXT_CHAT_TEAM", -- Control name
-        Key = 213, -- home
-    },
-}
